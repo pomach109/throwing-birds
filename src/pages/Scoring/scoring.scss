@@ -1,0 +1,238 @@
+@import "../../variables.scss";
+
+.scoring {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+
+    &--logo {
+      height: 2rem;
+    }
+
+    &--parWrap {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+
+      &--title {
+        display: flex;
+
+        & p {
+          letter-spacing: 2px;
+          font-family: $font-title;
+          color: $color-title;
+          font-size: larger;
+
+          &:last-child {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      &--value {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0.5rem;
+        width: 100%;
+
+        & button {
+          border-radius: 50%;
+          height: 1.5rem;
+          width: 1.5rem;
+          border-style: none;
+          background-color: $color-title;
+          justify-content: center;
+          align-items: center;
+          font-size: 2.5rem;
+          display: flex;
+
+          & p {
+            margin-top: -0.3rem;
+            font-family: $font-txt;
+            color: white;
+          }
+        }
+
+        & p {
+          font-family: $font-title;
+          color: $color-contrast;
+        }
+      }
+    }
+  }
+
+  &__player {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+
+    overflow: scroll;
+    padding-top: 1rem;
+
+    &--card {
+      background-color: $color-title;
+      display: flex;
+      width: 100%;
+      height: 4rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      justify-content: space-around;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      &--img {
+        margin-right: 0.5rem;
+        height: 2.5rem;
+      }
+
+      &--birdies {
+        height: 50%;
+        display: flex;
+        align-items: flex-end;
+        margin-left: -3rem;
+        font-weight: 900;
+      }
+
+      &--name {
+        font-weight: 900;
+      }
+
+      &--btnWrapper {
+        display: flex;
+        flex-direction: column;
+        height: 120%;
+        justify-content: space-between;
+
+        &--btn {
+          border-radius: 50%;
+          height: 1.5rem;
+          width: 1.5rem;
+          border-style: none;
+          background-color: $color-contrast;
+          justify-content: center;
+          align-items: center;
+          font-size: 3rem;
+
+          & p {
+            margin-top: -0.5rem;
+            font-family: $font-txt;
+            color: white;
+          }
+        }
+      }
+
+      &--throws {
+        font-family: $font-title;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0 1rem 0;
+
+    &--btn {
+      background-color: $color-contrast;
+      border-style: none;
+      height: $btn-height;
+      width: $btn-width;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: xx-large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--break {
+        background-color: $color-red;
+        font-size: xx-large;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__alert {
+    position: absolute;
+    background-color: $color-offWhite;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    &--header {
+      display: flex;
+      flex: 3 1;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+
+      &--round {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        background-color: $color-title;
+
+        &--img {
+          height: 5rem;
+        }
+      }
+    }
+
+    & p {
+      display: flex;
+      flex: 1 1;
+      align-items: center;
+      color: $color-title;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    &--wrapper {
+      width: 80%;
+      display: flex;
+      flex: 2 1;
+
+      justify-content: space-around;
+
+      &--btn {
+        text-decoration: none;
+        border-style: none;
+        height: $btn-height;
+        width: $btn-width;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: "Quicksand";
+        font-size: small;
+        border-radius: 5px;
+
+        &--no {
+          background-color: $color-red;
+        }
+
+        &--yes {
+          background-color: $color-contrast;
+          border: 2px solid $color-red;
+        }
+      }
+    }
+  }
+}

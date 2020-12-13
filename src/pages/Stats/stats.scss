@@ -1,0 +1,103 @@
+@import "../../variables.scss";
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1;
+
+  &__header {
+    display: flex;
+    height: 15%;
+    width: 100%;
+    background-color: burlywood;
+
+    &--btn {
+      height: fit-content;
+      padding: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex: 1 1;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-transform: uppercase;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      &__player {
+        display: flex;
+        width: 80%;
+        height: fit-content;
+        justify-content: space-evenly;
+        padding: 1rem 0.5rem;
+        align-items: center;
+
+        &--img {
+          height: 2.5rem;
+        }
+
+        &--birdies {
+          color: #55967e;
+          font-weight: 700;
+          font-family: "Quicksand", sans-serif;
+          margin-left: -1.5rem;
+          margin-top: 1.2rem;
+        }
+
+        &--name {
+          color: #263959;
+          font-weight: 700;
+          font-family: $font-title;
+        }
+
+        &--tot {
+          color: #263959;
+          font-size: 1.3rem;
+          font-family: $font-title;
+        }
+      }
+    }
+
+    &--nines {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: $color-title;
+      width: 80%;
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem 0.5rem 0rem;
+
+    &--btn {
+      background-color: #55967e;
+      border-style: none;
+      height: $btn-height;
+      width: $btn-width;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: xx-large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
